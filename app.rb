@@ -32,5 +32,21 @@ class App < Sinatra::Base
     @new_phrase
   end
 
+  get '/:operation/:number1/:number2' do
+    @operation = params[:operation]
+    @num1, @num2 = params[:number1], params[:number2]
+    case @operation
+      when "add"
+        @num1 + @num2
+      when "subtract"
+        @num1 - @num2
+      when "multiply"
+        @num1 * @num2
+      when "divide"
+        @num1 / @num2
+    end
+  end
+      
+
 
 end
