@@ -45,6 +45,8 @@ class App < Sinatra::Base
         @result = @num1 * @num2
       when "divide"
         @result = @num1 / @num2
+      else
+        @result = nil
     end
   end
 
