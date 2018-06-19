@@ -13,8 +13,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:num/:phrase' do
-    @num = params[:num]
-
+    @num = params[:num].to_i
       @num.times |el| do
         "#{params[:phrase]}"
       end
