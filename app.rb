@@ -48,8 +48,7 @@ class App < Sinatra::Base
       else
         @result = nil
     end
-
-    @result
+    "#{@result}"
   end
 
 end
